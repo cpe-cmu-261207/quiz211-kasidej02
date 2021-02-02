@@ -1,4 +1,8 @@
+import React,{ useState } from 'react'
+
+
 function App() {
+  const [count , setCount] = useState(620610776)
   const persons = [
     {
       name: "Bob",
@@ -9,13 +13,32 @@ function App() {
       name: "Alice",
       gender: "male",
       age: "20"
+    },
+    {
+      name: "Kasidej Kammool 620610776",
+      gender: "male",
+      age: "19"
     }
   ];
   return (
     <div class="ml-2">
       <h3 class="title is-3">Person List</h3>
 
+
       {/* Convert me to a component! */}
+
+      {/* this.state.persons.map((person,index)=>{
+        const {gender,age} = person
+        return(
+          <tr key={id}>
+               <td>{name}</td>
+               <td>{gender}</td>
+               <td>{age}</td>
+               
+            </tr>
+        )
+      }) */}
+      
       <table class="table is-bordered mb-3">
         <tbody>
           <tr>
@@ -63,10 +86,13 @@ function App() {
 
       {/* Code me please! */}
       <h3 class="title is-3">ID Counter</h3>
-      <p>YOUR ID HERE</p>
-      <button>-</button>
+      <p>{count}</p>
+      <button onClick={()=>setCount(count-1)
+      }>-</button>
       <button>reset</button>
-      <button>+</button>
+      <button onClick={()=>setCount(count+1)
+        
+      }>+</button>
     </div>
   );
 }
