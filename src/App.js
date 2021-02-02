@@ -27,19 +27,24 @@ function App() {
 
       {/* Convert me to a component! */}
 
-      {/* this.state.persons.map((person,index)=>{
-        const {gender,age} = person
-        return(
-          <tr key={id}>
-               <td>{name}</td>
-               <td>{gender}</td>
-               <td>{age}</td>
-               
-            </tr>
-        )
-      }) */}
-      
-      <table class="table is-bordered mb-3">
+      {persons.map((person) =>(
+        <table class="table is-bordered mb-3">
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>{person.name}</td>
+            <td>{person.gender}</td>
+            <td>{person.age}</td>
+          </tr>
+        </tbody>
+      </table>
+      ))}
+         
+      {/* <table class="table is-bordered mb-3">
         <tbody>
           <tr>
             <th>Name</th>
@@ -82,7 +87,7 @@ function App() {
             <td>19</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
 
       {/* Code me please! */}
       <h3 class="title is-3">ID Counter</h3>
