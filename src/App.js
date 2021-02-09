@@ -1,8 +1,7 @@
-import React,{ useState } from 'react'
-
+import React, { useState } from "react";
 
 function App() {
-  const [count , setCount] = useState(620610776)
+  const [count, setCount] = useState(620610776);
   const persons = [
     {
       name: "Bob",
@@ -24,80 +23,31 @@ function App() {
     <div class="ml-2">
       <h3 class="title is-3">Person List</h3>
 
-
       {/* Convert me to a component! */}
 
-      {persons.map((person) =>(
+      {persons.map((person) => (
         <table class="table is-bordered mb-3">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>{person.name}</td>
-            <td>{person.gender}</td>
-            <td>{person.age}</td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>{person.name}</td>
+              <td>{person.gender}</td>
+              <td>{person.age}</td>
+            </tr>
+          </tbody>
+        </table>
       ))}
-         
-      {/* <table class="table is-bordered mb-3">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Bob</td>
-            <td>male</td>
-            <td>50</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      <table class="table is-bordered mb-3">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Alice</td>
-            <td>male</td>
-            <td>20</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      <table class="table is-bordered mb-3">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Kasidej Kammool 620610776</td>
-            <td>male</td>
-            <td>19</td>
-          </tr>
-        </tbody>
-      </table> */}
 
       {/* Code me please! */}
       <h3 class="title is-3">ID Counter</h3>
       <p>{count}</p>
-      <button onClick={()=>setCount(count-1)
-      }>-</button>
-      <button>reset</button>
-      <button onClick={()=>setCount(count+1)
-        
-      }>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={() => setCount(620610776)}>reset</button>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   );
 }
